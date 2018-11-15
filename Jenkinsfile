@@ -13,8 +13,9 @@ node{
    stage('Push Docker Image'){
       withCredentials([string(credentialsId: 'docker-pswd', variable: 'docker-paswd')]) {
     // some block
-        sh "docker login -u mdaali -p ${docker-paswd}"
-     }
+         sh "docker login -u mdaali -p ${docker-paswd}"
+}
+      
      sh 'docker push kammana/my-app:2.0.0'
    }
    stage('Run Container on Dev Server'){
