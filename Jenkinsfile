@@ -15,7 +15,7 @@ node{
     // some block
          sh "docker login -u mdaali -p ${dockerpwd}"
 }    
-     sh 'docker push kammana/my-app:2.0.0'
+     sh 'docker push mdaali/my-app:2.0.0'
    }
    stage('Run Container on Dev Server'){
      sh 'docker run -it --hostname Jenkins_onRow --name Jenkins_onRun ubuntu /bin/bash'
