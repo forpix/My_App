@@ -7,7 +7,7 @@ node{
      def mvnCMD = "${mvnHome}/bin/mvn"
      sh "${mvnCMD} clean package"
      sh "pwd"
-     sh "date"
+     sh 'date'
    }
    stage('Build Docker Image'){
      sh 'docker build -t mdaali/my-app:2.0.0 .'
